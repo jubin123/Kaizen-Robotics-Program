@@ -1,0 +1,148 @@
+   1               		.file	"PWM.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 8FEF      		ldi r24,lo8(-1)
+  25 0002 8ABB      		out 58-32,r24
+  26               	.LM3:
+  27 0004 61E0      		ldi r22,lo8(1)
+  28               	.LBB30:
+  29               	.LBB31:
+  30               	.LBB32:
+  31               	.LBB33:
+  32               	.LM4:
+  33 0006 44ED      		ldi r20,lo8(12500)
+  34 0008 50E3      		ldi r21,hi8(12500)
+  35               	.LBE33:
+  36               	.LBE32:
+  37               	.LBE31:
+  38               	.LBE30:
+  39               	.LBB37:
+  40               	.LBB38:
+  41               	.LBB39:
+  42               	.LBB40:
+  43 000a 29E1      		ldi r18,lo8(25)
+  44 000c 30E0      		ldi r19,hi8(25)
+  45               	.LVL0:
+  46               	.L4:
+  47               	.LBE40:
+  48               	.LBE39:
+  49               	.LBE38:
+  50               	.LBE37:
+  51               	.LM5:
+  52 000e 6BBB      		out 59-32,r22
+  53               	.LBB44:
+  54               	.LBB36:
+  55               	.LBB35:
+  56               	.LBB34:
+  57               	.LM6:
+  58 0010 CA01      		movw r24,r20
+  59               	.LVL1:
+  60               	/* #APP */
+  61               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  62 0012 0197      		1: sbiw r24,1
+  63 0014 01F4      		brne 1b
+  64               	 ;  0 "" 2
+  65               	/* #NOAPP */
+  66               	.LBE34:
+  67               	.LBE35:
+  68               	.LBE36:
+  69               	.LBE44:
+  70               	.LM7:
+  71 0016 1BBA      		out 59-32,__zero_reg__
+  72               	.LBB45:
+  73               	.LBB46:
+  74               	.LBB47:
+  75               	.LBB48:
+  76               	.LM8:
+  77 0018 CA01      		movw r24,r20
+  78               	.LVL2:
+  79               	/* #APP */
+  80               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  81 001a 0197      		1: sbiw r24,1
+  82 001c 01F4      		brne 1b
+  83               	 ;  0 "" 2
+  84               	/* #NOAPP */
+  85               	.LBE48:
+  86               	.LBE47:
+  87               	.LBE46:
+  88               	.LBE45:
+  89               	.LM9:
+  90 001e 6BBB      		out 59-32,r22
+  91 0020 80E1      		ldi r24,lo8(10000)
+  92 0022 97E2      		ldi r25,hi8(10000)
+  93               	.LVL3:
+  94               	.L2:
+  95               	.LBB49:
+  96               	.LBB43:
+  97               	.LBB42:
+  98               	.LBB41:
+  99               	.LM10:
+ 100 0024 F901      		movw r30,r18
+ 101               	.LVL4:
+ 102               	/* #APP */
+ 103               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 104 0026 3197      		1: sbiw r30,1
+ 105 0028 01F4      		brne 1b
+ 106               	 ;  0 "" 2
+ 107               	/* #NOAPP */
+ 108               	.LBE41:
+ 109               	.LBE42:
+ 110               	.LM11:
+ 111 002a 0197      		sbiw r24,1
+ 112               	.LM12:
+ 113 002c 01F4      		brne .L2
+ 114               	.LBE43:
+ 115               	.LBE49:
+ 116               	.LM13:
+ 117 002e 1BBA      		out 59-32,__zero_reg__
+ 118 0030 80E1      		ldi r24,lo8(10000)
+ 119 0032 97E2      		ldi r25,hi8(10000)
+ 120               	.LVL5:
+ 121               	.L3:
+ 122               	.LBB50:
+ 123               	.LBB51:
+ 124               	.LBB52:
+ 125               	.LBB53:
+ 126               	.LM14:
+ 127 0034 F901      		movw r30,r18
+ 128               	.LVL6:
+ 129               	/* #APP */
+ 130               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 131 0036 3197      		1: sbiw r30,1
+ 132 0038 01F4      		brne 1b
+ 133               	 ;  0 "" 2
+ 134               	/* #NOAPP */
+ 135               	.LBE53:
+ 136               	.LBE52:
+ 137               	.LM15:
+ 138 003a 0197      		sbiw r24,1
+ 139               	.LM16:
+ 140 003c 01F4      		brne .L3
+ 141 003e 00C0      		rjmp .L4
+ 142               	.LBE51:
+ 143               	.LBE50:
+ 144               	.LFE6:
+ 170               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 PWM.c
+C:\Users\Nithish\AppData\Local\Temp/ccSlfjnH.s:2      *ABS*:0000003f __SREG__
+C:\Users\Nithish\AppData\Local\Temp/ccSlfjnH.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Nithish\AppData\Local\Temp/ccSlfjnH.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Nithish\AppData\Local\Temp/ccSlfjnH.s:5      *ABS*:00000034 __CCP__
+C:\Users\Nithish\AppData\Local\Temp/ccSlfjnH.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Nithish\AppData\Local\Temp/ccSlfjnH.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Nithish\AppData\Local\Temp/ccSlfjnH.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,426 @@
+   1               		.file	"OAR.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 11BA      		out 49-32,__zero_reg__
+  25               	.LM3:
+  26 0002 8FEF      		ldi r24,lo8(-1)
+  27 0004 87BB      		out 55-32,r24
+  28               	.LM4:
+  29 0006 82BB      		out 50-32,r24
+  30               	.LM5:
+  31 0008 BAE0      		ldi r27,lo8(10)
+  32               	.LM6:
+  33 000a 65E0      		ldi r22,lo8(5)
+  34               	.LBB72:
+  35               	.LBB73:
+  36               	.LBB74:
+  37               	.LBB75:
+  38               	.LM7:
+  39 000c 49E1      		ldi r20,lo8(25)
+  40 000e 50E0      		ldi r21,hi8(25)
+  41               	.LBE75:
+  42               	.LBE74:
+  43               	.LBE73:
+  44               	.LBE72:
+  45               	.LM8:
+  46 0010 A6E0      		ldi r26,lo8(6)
+  47               	.LM9:
+  48 0012 79E0      		ldi r23,lo8(9)
+  49               	.LVL0:
+  50               	.L36:
+  51               	.LM10:
+  52 0014 80B3      		in r24,48-32
+  53               	.LVL1:
+  54 0016 90E0      		ldi r25,lo8(0)
+  55               	.LM11:
+  56 0018 8F3F      		cpi r24,255
+  57 001a 9105      		cpc r25,__zero_reg__
+  58               	.LVL2:
+  59 001c 01F4      		brne .L2
+  60               	.LM12:
+  61 001e B8BB      		out 56-32,r27
+  62 0020 00C0      		rjmp .L3
+  63               	.L2:
+  64               	.LM13:
+  65 0022 8E3F      		cpi r24,254
+  66 0024 9105      		cpc r25,__zero_reg__
+  67 0026 01F4      		brne .L4
+  68               	.LM14:
+  69 0028 A8BB      		out 56-32,r26
+  70 002a 00C0      		rjmp .L5
+  71               	.L4:
+  72               	.LM15:
+  73 002c 853F      		cpi r24,245
+  74 002e 9105      		cpc r25,__zero_reg__
+  75 0030 01F4      		brne .L6
+  76               	.LM16:
+  77 0032 68BB      		out 56-32,r22
+  78 0034 28EB      		ldi r18,lo8(3000)
+  79 0036 3BE0      		ldi r19,hi8(3000)
+  80               	.LVL3:
+  81               	.L7:
+  82               	.LBB79:
+  83               	.LBB80:
+  84               	.LBB81:
+  85               	.LBB82:
+  86               	.LM17:
+  87 0038 FA01      		movw r30,r20
+  88               	.LVL4:
+  89               	/* #APP */
+  90               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  91 003a 3197      		1: sbiw r30,1
+  92 003c 01F4      		brne 1b
+  93               	 ;  0 "" 2
+  94               	/* #NOAPP */
+  95               	.LBE82:
+  96               	.LBE81:
+  97               	.LM18:
+  98 003e 2150      		subi r18,lo8(-(-1))
+  99 0040 3040      		sbci r19,hi8(-(-1))
+ 100               	.LM19:
+ 101 0042 01F4      		brne .L7
+ 102               	.LBE80:
+ 103               	.LBE79:
+ 104               	.LM20:
+ 105 0044 78BB      		out 56-32,r23
+ 106 0046 28EB      		ldi r18,lo8(3000)
+ 107 0048 3BE0      		ldi r19,hi8(3000)
+ 108               	.LVL5:
+ 109               	.L8:
+ 110               	.LBB83:
+ 111               	.LBB84:
+ 112               	.LBB85:
+ 113               	.LBB86:
+ 114               	.LM21:
+ 115 004a FA01      		movw r30,r20
+ 116               	.LVL6:
+ 117               	/* #APP */
+ 118               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 119 004c 3197      		1: sbiw r30,1
+ 120 004e 01F4      		brne 1b
+ 121               	 ;  0 "" 2
+ 122               	/* #NOAPP */
+ 123               	.LBE86:
+ 124               	.LBE85:
+ 125               	.LM22:
+ 126 0050 2150      		subi r18,lo8(-(-1))
+ 127 0052 3040      		sbci r19,hi8(-(-1))
+ 128               	.LM23:
+ 129 0054 01F4      		brne .L8
+ 130 0056 00C0      		rjmp .L9
+ 131               	.LVL7:
+ 132               	.L6:
+ 133               	.LBE84:
+ 134               	.LBE83:
+ 135               	.LM24:
+ 136 0058 8D3F      		cpi r24,253
+ 137 005a 9105      		cpc r25,__zero_reg__
+ 138 005c 01F4      		brne .L3
+ 139               	.LM25:
+ 140 005e 68BB      		out 56-32,r22
+ 141 0060 28EB      		ldi r18,lo8(3000)
+ 142 0062 3BE0      		ldi r19,hi8(3000)
+ 143               	.LVL8:
+ 144               	.L10:
+ 145               	.LBB87:
+ 146               	.LBB78:
+ 147               	.LBB77:
+ 148               	.LBB76:
+ 149               	.LM26:
+ 150 0064 FA01      		movw r30,r20
+ 151               	.LVL9:
+ 152               	/* #APP */
+ 153               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 154 0066 3197      		1: sbiw r30,1
+ 155 0068 01F4      		brne 1b
+ 156               	 ;  0 "" 2
+ 157               	/* #NOAPP */
+ 158               	.LBE76:
+ 159               	.LBE77:
+ 160               	.LM27:
+ 161 006a 2150      		subi r18,lo8(-(-1))
+ 162 006c 3040      		sbci r19,hi8(-(-1))
+ 163               	.LM28:
+ 164 006e 01F4      		brne .L10
+ 165               	.LBE78:
+ 166               	.LBE87:
+ 167               	.LM29:
+ 168 0070 A8BB      		out 56-32,r26
+ 169 0072 28EB      		ldi r18,lo8(3000)
+ 170 0074 3BE0      		ldi r19,hi8(3000)
+ 171               	.LVL10:
+ 172               	.L11:
+ 173               	.LBB88:
+ 174               	.LBB89:
+ 175               	.LBB90:
+ 176               	.LBB91:
+ 177               	.LM30:
+ 178 0076 FA01      		movw r30,r20
+ 179               	.LVL11:
+ 180               	/* #APP */
+ 181               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 182 0078 3197      		1: sbiw r30,1
+ 183 007a 01F4      		brne 1b
+ 184               	 ;  0 "" 2
+ 185               	/* #NOAPP */
+ 186               	.LBE91:
+ 187               	.LBE90:
+ 188               	.LM31:
+ 189 007c 2150      		subi r18,lo8(-(-1))
+ 190 007e 3040      		sbci r19,hi8(-(-1))
+ 191               	.LM32:
+ 192 0080 01F4      		brne .L11
+ 193 0082 00C0      		rjmp .L12
+ 194               	.LVL12:
+ 195               	.L3:
+ 196               	.LBE89:
+ 197               	.LBE88:
+ 198               	.LM33:
+ 199 0084 8C3F      		cpi r24,252
+ 200 0086 9105      		cpc r25,__zero_reg__
+ 201 0088 01F4      		brne .L5
+ 202               	.LM34:
+ 203 008a 68BB      		out 56-32,r22
+ 204 008c 88EB      		ldi r24,lo8(3000)
+ 205 008e 9BE0      		ldi r25,hi8(3000)
+ 206               	.LVL13:
+ 207               	.L13:
+ 208               	.LBB92:
+ 209               	.LBB93:
+ 210               	.LBB94:
+ 211               	.LBB95:
+ 212               	.LM35:
+ 213 0090 FA01      		movw r30,r20
+ 214               	.LVL14:
+ 215               	/* #APP */
+ 216               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 217 0092 3197      		1: sbiw r30,1
+ 218 0094 01F4      		brne 1b
+ 219               	 ;  0 "" 2
+ 220               	/* #NOAPP */
+ 221               	.LBE95:
+ 222               	.LBE94:
+ 223               	.LM36:
+ 224 0096 0197      		sbiw r24,1
+ 225               	.LM37:
+ 226 0098 01F4      		brne .L13
+ 227               	.LBE93:
+ 228               	.LBE92:
+ 229               	.LM38:
+ 230 009a A8BB      		out 56-32,r26
+ 231 009c 88EB      		ldi r24,lo8(3000)
+ 232 009e 9BE0      		ldi r25,hi8(3000)
+ 233               	.LVL15:
+ 234               	.L14:
+ 235               	.LBB96:
+ 236               	.LBB97:
+ 237               	.LBB98:
+ 238               	.LBB99:
+ 239               	.LM39:
+ 240 00a0 FA01      		movw r30,r20
+ 241               	.LVL16:
+ 242               	/* #APP */
+ 243               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 244 00a2 3197      		1: sbiw r30,1
+ 245 00a4 01F4      		brne 1b
+ 246               	 ;  0 "" 2
+ 247               	/* #NOAPP */
+ 248               	.LBE99:
+ 249               	.LBE98:
+ 250               	.LM40:
+ 251 00a6 0197      		sbiw r24,1
+ 252               	.LM41:
+ 253 00a8 01F4      		brne .L14
+ 254 00aa 00C0      		rjmp .L36
+ 255               	.LVL17:
+ 256               	.L5:
+ 257               	.LBE97:
+ 258               	.LBE96:
+ 259               	.LM42:
+ 260 00ac 8B3F      		cpi r24,251
+ 261 00ae 9105      		cpc r25,__zero_reg__
+ 262 00b0 01F4      		brne .L16
+ 263               	.LM43:
+ 264 00b2 78BB      		out 56-32,r23
+ 265 00b4 00C0      		rjmp .L36
+ 266               	.L16:
+ 267               	.LM44:
+ 268 00b6 8A3F      		cpi r24,250
+ 269 00b8 9105      		cpc r25,__zero_reg__
+ 270 00ba 01F4      		brne .L9
+ 271               	.LM45:
+ 272 00bc 68BB      		out 56-32,r22
+ 273 00be 88EB      		ldi r24,lo8(3000)
+ 274 00c0 9BE0      		ldi r25,hi8(3000)
+ 275               	.LVL18:
+ 276               	.L17:
+ 277               	.LBB100:
+ 278               	.LBB101:
+ 279               	.LBB102:
+ 280               	.LBB103:
+ 281               	.LM46:
+ 282 00c2 FA01      		movw r30,r20
+ 283               	.LVL19:
+ 284               	/* #APP */
+ 285               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 286 00c4 3197      		1: sbiw r30,1
+ 287 00c6 01F4      		brne 1b
+ 288               	 ;  0 "" 2
+ 289               	/* #NOAPP */
+ 290               	.LBE103:
+ 291               	.LBE102:
+ 292               	.LM47:
+ 293 00c8 0197      		sbiw r24,1
+ 294               	.LM48:
+ 295 00ca 01F4      		brne .L17
+ 296               	.LBE101:
+ 297               	.LBE100:
+ 298               	.LM49:
+ 299 00cc A8BB      		out 56-32,r26
+ 300 00ce 88EB      		ldi r24,lo8(3000)
+ 301 00d0 9BE0      		ldi r25,hi8(3000)
+ 302               	.LVL20:
+ 303               	.L18:
+ 304               	.LBB104:
+ 305               	.LBB105:
+ 306               	.LBB106:
+ 307               	.LBB107:
+ 308               	.LM50:
+ 309 00d2 FA01      		movw r30,r20
+ 310               	.LVL21:
+ 311               	/* #APP */
+ 312               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 313 00d4 3197      		1: sbiw r30,1
+ 314 00d6 01F4      		brne 1b
+ 315               	 ;  0 "" 2
+ 316               	/* #NOAPP */
+ 317               	.LBE107:
+ 318               	.LBE106:
+ 319               	.LM51:
+ 320 00d8 0197      		sbiw r24,1
+ 321               	.LM52:
+ 322 00da 01F4      		brne .L18
+ 323 00dc 00C0      		rjmp .L36
+ 324               	.LVL22:
+ 325               	.L9:
+ 326               	.LBE105:
+ 327               	.LBE104:
+ 328               	.LM53:
+ 329 00de 893F      		cpi r24,249
+ 330 00e0 9105      		cpc r25,__zero_reg__
+ 331 00e2 01F4      		brne .L12
+ 332               	.LM54:
+ 333 00e4 68BB      		out 56-32,r22
+ 334 00e6 88EB      		ldi r24,lo8(3000)
+ 335 00e8 9BE0      		ldi r25,hi8(3000)
+ 336               	.LVL23:
+ 337               	.L19:
+ 338               	.LBB108:
+ 339               	.LBB109:
+ 340               	.LBB110:
+ 341               	.LBB111:
+ 342               	.LM55:
+ 343 00ea FA01      		movw r30,r20
+ 344               	.LVL24:
+ 345               	/* #APP */
+ 346               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 347 00ec 3197      		1: sbiw r30,1
+ 348 00ee 01F4      		brne 1b
+ 349               	 ;  0 "" 2
+ 350               	/* #NOAPP */
+ 351               	.LBE111:
+ 352               	.LBE110:
+ 353               	.LM56:
+ 354 00f0 0197      		sbiw r24,1
+ 355               	.LM57:
+ 356 00f2 01F4      		brne .L19
+ 357               	.LBE109:
+ 358               	.LBE108:
+ 359               	.LM58:
+ 360 00f4 78BB      		out 56-32,r23
+ 361 00f6 88EB      		ldi r24,lo8(3000)
+ 362 00f8 9BE0      		ldi r25,hi8(3000)
+ 363               	.LVL25:
+ 364               	.L20:
+ 365               	.LBB112:
+ 366               	.LBB113:
+ 367               	.LBB114:
+ 368               	.LBB115:
+ 369               	.LM59:
+ 370 00fa FA01      		movw r30,r20
+ 371               	.LVL26:
+ 372               	/* #APP */
+ 373               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 374 00fc 3197      		1: sbiw r30,1
+ 375 00fe 01F4      		brne 1b
+ 376               	 ;  0 "" 2
+ 377               	/* #NOAPP */
+ 378               	.LBE115:
+ 379               	.LBE114:
+ 380               	.LM60:
+ 381 0100 0197      		sbiw r24,1
+ 382               	.LM61:
+ 383 0102 01F4      		brne .L20
+ 384 0104 00C0      		rjmp .L36
+ 385               	.LVL27:
+ 386               	.L12:
+ 387               	.LBE113:
+ 388               	.LBE112:
+ 389               	.LM62:
+ 390 0106 883F      		cpi r24,248
+ 391 0108 9105      		cpc r25,__zero_reg__
+ 392 010a 01F0      		breq .+2
+ 393 010c 00C0      		rjmp .L36
+ 394               	.LM63:
+ 395 010e 78BB      		out 56-32,r23
+ 396 0110 80E2      		ldi r24,lo8(20000)
+ 397 0112 9EE4      		ldi r25,hi8(20000)
+ 398               	.LVL28:
+ 399               	.L21:
+ 400               	.LBB116:
+ 401               	.LBB117:
+ 402               	.LBB118:
+ 403               	.LBB119:
+ 404               	.LM64:
+ 405 0114 FA01      		movw r30,r20
+ 406               	.LVL29:
+ 407               	/* #APP */
+ 408               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 409 0116 3197      		1: sbiw r30,1
+ 410 0118 01F4      		brne 1b
+ 411               	 ;  0 "" 2
+ 412               	/* #NOAPP */
+ 413               	.LBE119:
+ 414               	.LBE118:
+ 415               	.LM65:
+ 416 011a 0197      		sbiw r24,1
+ 417               	.LM66:
+ 418 011c 01F4      		brne .L21
+ 419 011e 00C0      		rjmp .L36
+ 420               	.LBE117:
+ 421               	.LBE116:
+ 422               	.LFE6:
+ 448               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 OAR.c
+C:\Users\Nithish\AppData\Local\Temp/ccnF5Rl8.s:2      *ABS*:0000003f __SREG__
+C:\Users\Nithish\AppData\Local\Temp/ccnF5Rl8.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Nithish\AppData\Local\Temp/ccnF5Rl8.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Nithish\AppData\Local\Temp/ccnF5Rl8.s:5      *ABS*:00000034 __CCP__
+C:\Users\Nithish\AppData\Local\Temp/ccnF5Rl8.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Nithish\AppData\Local\Temp/ccnF5Rl8.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Nithish\AppData\Local\Temp/ccnF5Rl8.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS

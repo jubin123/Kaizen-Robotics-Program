@@ -1,0 +1,94 @@
+   1               		.file	"OARLFR.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 11BA      		out 49-32,__zero_reg__
+  25               	.LM3:
+  26 0002 8FEF      		ldi r24,lo8(-1)
+  27 0004 87BB      		out 55-32,r24
+  28               	.LM4:
+  29 0006 82BB      		out 50-32,r24
+  30               	.LM5:
+  31 0008 5AE0      		ldi r21,lo8(10)
+  32               	.LM6:
+  33 000a 49E0      		ldi r20,lo8(9)
+  34               	.LM7:
+  35 000c 36E0      		ldi r19,lo8(6)
+  36               	.LM8:
+  37 000e 2AE1      		ldi r18,lo8(26)
+  38               	.LVL0:
+  39               	.L11:
+  40               	.LM9:
+  41 0010 80B3      		in r24,48-32
+  42               	.LVL1:
+  43 0012 90E0      		ldi r25,lo8(0)
+  44               	.LM10:
+  45 0014 8A3F      		cpi r24,250
+  46 0016 9105      		cpc r25,__zero_reg__
+  47               	.LVL2:
+  48 0018 01F4      		brne .L2
+  49               	.LM11:
+  50 001a 58BB      		out 56-32,r21
+  51 001c 00C0      		rjmp .L3
+  52               	.L2:
+  53               	.LM12:
+  54 001e 8B3F      		cpi r24,251
+  55 0020 9105      		cpc r25,__zero_reg__
+  56 0022 01F4      		brne .L4
+  57               	.LM13:
+  58 0024 38BB      		out 56-32,r19
+  59 0026 00C0      		rjmp .L5
+  60               	.L4:
+  61               	.LM14:
+  62 0028 8E3F      		cpi r24,254
+  63 002a 9105      		cpc r25,__zero_reg__
+  64 002c 01F4      		brne .L6
+  65               	.LM15:
+  66 002e 48BB      		out 56-32,r20
+  67 0030 00C0      		rjmp .L11
+  68               	.L6:
+  69               	.LM16:
+  70 0032 883F      		cpi r24,248
+  71 0034 9105      		cpc r25,__zero_reg__
+  72 0036 01F0      		breq .L12
+  73               	.L3:
+  74               	.LM17:
+  75 0038 893F      		cpi r24,249
+  76 003a 9105      		cpc r25,__zero_reg__
+  77 003c 01F4      		brne .L5
+  78               	.L12:
+  79               	.LM18:
+  80 003e 18BA      		out 56-32,__zero_reg__
+  81 0040 00C0      		rjmp .L11
+  82               	.L5:
+  83               	.LM19:
+  84 0042 8F3F      		cpi r24,255
+  85 0044 9105      		cpc r25,__zero_reg__
+  86 0046 01F4      		brne .L11
+  87               	.LM20:
+  88 0048 28BB      		out 56-32,r18
+  89 004a 00C0      		rjmp .L11
+  90               	.LFE6:
+ 116               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 OARLFR.c
+C:\Users\Nithish\AppData\Local\Temp/cc0cLKGx.s:2      *ABS*:0000003f __SREG__
+C:\Users\Nithish\AppData\Local\Temp/cc0cLKGx.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Nithish\AppData\Local\Temp/cc0cLKGx.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Nithish\AppData\Local\Temp/cc0cLKGx.s:5      *ABS*:00000034 __CCP__
+C:\Users\Nithish\AppData\Local\Temp/cc0cLKGx.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Nithish\AppData\Local\Temp/cc0cLKGx.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Nithish\AppData\Local\Temp/cc0cLKGx.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS

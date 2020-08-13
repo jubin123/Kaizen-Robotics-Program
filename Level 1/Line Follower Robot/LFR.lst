@@ -1,0 +1,137 @@
+   1               		.file	"LFR.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 11BA      		out 49-32,__zero_reg__
+  25               	.LM3:
+  26 0002 8FEF      		ldi r24,lo8(-1)
+  27 0004 87BB      		out 55-32,r24
+  28               	.LM4:
+  29 0006 82BB      		out 50-32,r24
+  30               	.LM5:
+  31 0008 6AE0      		ldi r22,lo8(10)
+  32               	.LM6:
+  33 000a F0E1      		ldi r31,lo8(16)
+  34               	.LBB18:
+  35               	.LBB19:
+  36               	.LBB20:
+  37               	.LBB21:
+  38               	.LM7:
+  39 000c 44ED      		ldi r20,lo8(12500)
+  40 000e 50E3      		ldi r21,hi8(12500)
+  41               	.LBE21:
+  42               	.LBE20:
+  43               	.LBE19:
+  44               	.LBE18:
+  45               	.LBB25:
+  46               	.LBB26:
+  47               	.LBB27:
+  48               	.LBB28:
+  49 0010 20E5      		ldi r18,lo8(-15536)
+  50 0012 33EC      		ldi r19,hi8(-15536)
+  51               	.LBE28:
+  52               	.LBE27:
+  53               	.LBE26:
+  54               	.LBE25:
+  55               	.LM8:
+  56 0014 E9E0      		ldi r30,lo8(9)
+  57               	.LM9:
+  58 0016 76E0      		ldi r23,lo8(6)
+  59               	.LVL0:
+  60               	.L9:
+  61               	.LM10:
+  62 0018 80B3      		in r24,48-32
+  63               	.LVL1:
+  64 001a 90E0      		ldi r25,lo8(0)
+  65               	.LM11:
+  66 001c 8C3F      		cpi r24,252
+  67 001e 9105      		cpc r25,__zero_reg__
+  68               	.LVL2:
+  69 0020 01F4      		brne .L2
+  70               	.LM12:
+  71 0022 68BB      		out 56-32,r22
+  72 0024 00C0      		rjmp .L9
+  73               	.L2:
+  74               	.LM13:
+  75 0026 8E3F      		cpi r24,254
+  76 0028 9105      		cpc r25,__zero_reg__
+  77 002a 01F4      		brne .L4
+  78               	.LM14:
+  79 002c 78BB      		out 56-32,r23
+  80 002e 00C0      		rjmp .L9
+  81               	.L4:
+  82               	.LM15:
+  83 0030 8D3F      		cpi r24,253
+  84 0032 9105      		cpc r25,__zero_reg__
+  85 0034 01F4      		brne .L5
+  86               	.LM16:
+  87 0036 E8BB      		out 56-32,r30
+  88 0038 00C0      		rjmp .L9
+  89               	.L5:
+  90               	.LM17:
+  91 003a 8F3F      		cpi r24,255
+  92 003c 9105      		cpc r25,__zero_reg__
+  93 003e 01F4      		brne .L9
+  94               	.LM18:
+  95 0040 F8BB      		out 56-32,r31
+  96               	.LBB32:
+  97               	.LBB24:
+  98               	.LBB23:
+  99               	.LBB22:
+ 100               	.LM19:
+ 101 0042 CA01      		movw r24,r20
+ 102               	.LVL3:
+ 103               	/* #APP */
+ 104               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 105 0044 0197      		1: sbiw r24,1
+ 106 0046 01F4      		brne 1b
+ 107               	 ;  0 "" 2
+ 108               	/* #NOAPP */
+ 109               	.LBE22:
+ 110               	.LBE23:
+ 111               	.LBE24:
+ 112               	.LBE32:
+ 113               	.LM20:
+ 114 0048 68BB      		out 56-32,r22
+ 115               	.LBB33:
+ 116               	.LBB31:
+ 117               	.LBB30:
+ 118               	.LBB29:
+ 119               	.LM21:
+ 120 004a C901      		movw r24,r18
+ 121               	.LVL4:
+ 122               	/* #APP */
+ 123               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 124 004c 0197      		1: sbiw r24,1
+ 125 004e 01F4      		brne 1b
+ 126               	 ;  0 "" 2
+ 127               	/* #NOAPP */
+ 128 0050 00C0      		rjmp .L9
+ 129               	.LBE29:
+ 130               	.LBE30:
+ 131               	.LBE31:
+ 132               	.LBE33:
+ 133               	.LFE6:
+ 159               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 LFR.c
+C:\Users\Nithish\AppData\Local\Temp/ccyPPEss.s:2      *ABS*:0000003f __SREG__
+C:\Users\Nithish\AppData\Local\Temp/ccyPPEss.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Nithish\AppData\Local\Temp/ccyPPEss.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Nithish\AppData\Local\Temp/ccyPPEss.s:5      *ABS*:00000034 __CCP__
+C:\Users\Nithish\AppData\Local\Temp/ccyPPEss.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Nithish\AppData\Local\Temp/ccyPPEss.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Nithish\AppData\Local\Temp/ccyPPEss.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS
