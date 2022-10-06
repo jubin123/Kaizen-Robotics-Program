@@ -2,7 +2,8 @@
 This repository contains all the code for the robotics projects I underwent during my time at the Training Program.
 
 ## The Program
-Kaizen Robotics Program is a certificate training program aimed at providing students a steep learning curve in the field of Robotics & Embedded Systems. The program comprises of 40 hours of Intensive Training.
+Kaizen Robotics Program is a certificate training program aimed at providing students a steep learning curve in the field of Robotics & Embedded Systems. The program comprises of 40 hours of Intensive Training. 
+Location - IIT Madras Research Park, Chennai, India
 
 ### Kaizen Robotics Program: Level - 1 [Link](https://www.eventshigh.com/detail/chennai/5d49814f9d1a70b862053ed0d8182bcc-kaizen-robotics-program-level-1)
 - ADC Based Speed Control (Register Level Programming)
